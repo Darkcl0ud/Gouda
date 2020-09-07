@@ -24,11 +24,10 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
-    QPushButton *HelloWorldButton;
     QPushButton *Calculator;
-    QPushButton *Close;
-    QPushButton *AutoDeployProject;
     QPushButton *BaseConverter;
+    QPushButton *AutoDeployProject;
+    QPushButton *Close;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -47,32 +46,26 @@ public:
         centralwidget->setSizePolicy(sizePolicy);
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        HelloWorldButton = new QPushButton(centralwidget);
-        HelloWorldButton->setObjectName(QString::fromUtf8("HelloWorldButton"));
-        HelloWorldButton->setCheckable(false);
-
-        gridLayout->addWidget(HelloWorldButton, 0, 1, 1, 1);
-
         Calculator = new QPushButton(centralwidget);
         Calculator->setObjectName(QString::fromUtf8("Calculator"));
         Calculator->setCheckable(false);
 
-        gridLayout->addWidget(Calculator, 1, 1, 1, 1);
-
-        Close = new QPushButton(centralwidget);
-        Close->setObjectName(QString::fromUtf8("Close"));
-
-        gridLayout->addWidget(Close, 5, 1, 1, 1);
-
-        AutoDeployProject = new QPushButton(centralwidget);
-        AutoDeployProject->setObjectName(QString::fromUtf8("AutoDeployProject"));
-
-        gridLayout->addWidget(AutoDeployProject, 2, 1, 1, 1);
+        gridLayout->addWidget(Calculator, 0, 1, 1, 1);
 
         BaseConverter = new QPushButton(centralwidget);
         BaseConverter->setObjectName(QString::fromUtf8("BaseConverter"));
 
-        gridLayout->addWidget(BaseConverter, 3, 1, 1, 1);
+        gridLayout->addWidget(BaseConverter, 2, 1, 1, 1);
+
+        AutoDeployProject = new QPushButton(centralwidget);
+        AutoDeployProject->setObjectName(QString::fromUtf8("AutoDeployProject"));
+
+        gridLayout->addWidget(AutoDeployProject, 1, 1, 1, 1);
+
+        Close = new QPushButton(centralwidget);
+        Close->setObjectName(QString::fromUtf8("Close"));
+
+        gridLayout->addWidget(Close, 4, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -87,11 +80,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Gouda", nullptr));
-        HelloWorldButton->setText(QCoreApplication::translate("MainWindow", "Hello World (Notify)", nullptr));
         Calculator->setText(QCoreApplication::translate("MainWindow", "Calculator", nullptr));
-        Close->setText(QCoreApplication::translate("MainWindow", "Close", nullptr));
-        AutoDeployProject->setText(QCoreApplication::translate("MainWindow", "Deploy Qt Exe (Windows)", nullptr));
         BaseConverter->setText(QCoreApplication::translate("MainWindow", "Base Converter", nullptr));
+        AutoDeployProject->setText(QCoreApplication::translate("MainWindow", "Deploy Qt Exe (Windows)", nullptr));
+        Close->setText(QCoreApplication::translate("MainWindow", "Close", nullptr));
     } // retranslateUi
 
 };

@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QMessageBox>
 #include "calc.h"
 #include "deployqt.h"
 #include "baseconvert.h"
@@ -21,15 +20,11 @@ public:
 
 private:
     Ui::MainWindow* ui;
-    QMessageBox msgBox;
-    QString HelloWorldString = "Hello, World!";
     Calc* calc;
     DeployQt* deployqt;
     BaseConvert* baseconvert;
 
 private slots:
-    void on_HelloWorldButton_clicked();
-
     void on_Calculator_clicked();
 
     void on_Close_clicked();

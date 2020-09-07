@@ -34,7 +34,9 @@ void BaseConvert::HexInput()
             InputStr[i] == '6' || InputStr[i] == '7' || InputStr[i] == '8' ||
             InputStr[i] == '9' || InputStr[i] == 'a' || InputStr[i] == 'b' ||
             InputStr[i] == 'c' || InputStr[i] == 'd' || InputStr[i] == 'e' ||
-            InputStr[i] == 'f')
+            InputStr[i] == 'f' || InputStr[i] == 'A' || InputStr[i] == 'B' || 
+            InputStr[i] == 'C' || InputStr[i] == 'D' || InputStr[i] == 'E' || 
+            InputStr[i] == 'F')
         {
             IsValid = true;
         }
@@ -59,7 +61,7 @@ void BaseConvert::HexInput()
     else
     {
         msgBox.setText("\nInvalid Hex Input\n");
-        msgBox.setWindowTitle("Notify");
+        msgBox.setWindowTitle("Error");
         msgBox.exec();
     }
 }
@@ -104,7 +106,7 @@ void BaseConvert::BinInput()
     else
     {
         msgBox.setText("\nInvalid Binary Input\n");
-        msgBox.setWindowTitle("Notify");
+        msgBox.setWindowTitle("Error");
         msgBox.exec();
     }
 }
@@ -157,7 +159,7 @@ void BaseConvert::DecInput()
     else
     {
         msgBox.setText("\nInvalid Decimal Input\n");
-        msgBox.setWindowTitle("Notify");
+        msgBox.setWindowTitle("Error");
         msgBox.exec();
     }
 }
