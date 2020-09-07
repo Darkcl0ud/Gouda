@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include "calc.h"
 #include "deployqt.h"
+#include "baseconvert.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,6 +19,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private:
+    Ui::MainWindow* ui;
+    QMessageBox msgBox;
+    QString HelloWorldString = "Hello, World!";
+    Calc* calc;
+    DeployQt* deployqt;
+    BaseConvert* baseconvert;
 
 private slots:
     void on_HelloWorldButton_clicked();
@@ -28,12 +36,6 @@ private slots:
 
     void on_AutoDeployProject_clicked();
 
-private:
-    Ui::MainWindow *ui;
-    QMessageBox msgBox;
-    QString HelloWorldString = "Hello, World!";
-    Calc *calc;
-    DeployQt *deployqt;
-
+    void on_BaseConverter_clicked();
 };
 #endif // MAINWINDOW_H

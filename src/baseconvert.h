@@ -2,6 +2,9 @@
 #define BASECONVERT_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <sstream>
+#include <bitset>
 
 namespace Ui {
 class BaseConvert;
@@ -17,6 +20,12 @@ public:
 
 private:
     Ui::BaseConvert *ui;
+    QMessageBox msgBox;
+
+public slots:
+    void HexInput();
+    void BinInput();
+    void DecInput(); 
 };
 
 #endif // BASECONVERT_H

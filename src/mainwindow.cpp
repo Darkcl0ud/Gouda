@@ -41,3 +41,9 @@ void MainWindow::on_AutoDeployProject_clicked()
     deployqt = new DeployQt();
     deployqt->show();
 }
+
+void MainWindow::on_BaseConverter_clicked()
+{
+    baseconvert = new BaseConvert();
+    baseconvert->show();
+}

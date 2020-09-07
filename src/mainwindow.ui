@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>246</width>
-    <height>146</height>
+    <width>251</width>
+    <height>177</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>My Programs</string>
+   <string>Gouda</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -58,6 +58,13 @@
      <widget class="QPushButton" name="AutoDeployProject">
       <property name="text">
        <string>Deploy Qt Exe (Windows)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="BaseConverter">
+      <property name="text">
+       <string>Base Converter</string>
       </property>
      </widget>
     </item>

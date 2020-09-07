@@ -28,13 +28,14 @@ public:
     QPushButton *Calculator;
     QPushButton *Close;
     QPushButton *AutoDeployProject;
+    QPushButton *BaseConverter;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(246, 146);
+        MainWindow->resize(251, 177);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -68,6 +69,11 @@ public:
 
         gridLayout->addWidget(AutoDeployProject, 2, 1, 1, 1);
 
+        BaseConverter = new QPushButton(centralwidget);
+        BaseConverter->setObjectName(QString::fromUtf8("BaseConverter"));
+
+        gridLayout->addWidget(BaseConverter, 3, 1, 1, 1);
+
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -80,11 +86,12 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "My Programs", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Gouda", nullptr));
         HelloWorldButton->setText(QCoreApplication::translate("MainWindow", "Hello World (Notify)", nullptr));
         Calculator->setText(QCoreApplication::translate("MainWindow", "Calculator", nullptr));
         Close->setText(QCoreApplication::translate("MainWindow", "Close", nullptr));
         AutoDeployProject->setText(QCoreApplication::translate("MainWindow", "Deploy Qt Exe (Windows)", nullptr));
+        BaseConverter->setText(QCoreApplication::translate("MainWindow", "Base Converter", nullptr));
     } // retranslateUi
 
 };
